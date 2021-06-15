@@ -3,7 +3,7 @@
 ## List of Topics To Review
 ### 1. Working with Java Data Types
 
-  - [ ] **[ 1A ]** Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting<br/>
+  - [ ] **[ [1A](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/1A.md) ]** Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting<br/>
   - [ ] **[ 1B ]** Handle text using String and StringBuilder classes <br>
   - [ ] **[ 1C ]** Use local variable type inference, including as lambda parameters 
 
