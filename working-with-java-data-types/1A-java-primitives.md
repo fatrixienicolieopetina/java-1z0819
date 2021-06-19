@@ -88,7 +88,7 @@ The table below shows the primitive types with their `Wrapper` classes.
 |`char` | `Character` | char |
 |`boolean` | `Boolean` | boolean or String |
 
-#### 📌 Java Boxing/Unboxing
+#### 📌 Java AutoBoxing/Unboxing
 
 ```java
     // Boxing
@@ -97,11 +97,8 @@ The table below shows the primitive types with their `Wrapper` classes.
     //Unboxing
     int i2 = i.intValue();
 ```
-**Boxing** . Primitive values, like `int`, `boolean` are converted to associated wrapper `Object`. 
+**AutoBoxing** . Primitive values, like `int`, `boolean` are converted to associated wrapper `Object`. 
 
-**Unboxing**. Wrapper objects are converted to primitive values, i.e. `int`, `boolean` 
-
-#### 📌Java Autoboxing
 Java 5 introduced autoboxing. Autoboxing/unboxing means automatic conversion of primitives to objects or vice versa, when needed. 
 It can happen during _assignments_, _passing parameters to methods_, _returning values from methods_, _variable comparisons_, _arithmetic operations_, and _others_.  
 For example,
@@ -114,6 +111,13 @@ For example,
    // Auto unboxing happens here
    int j = i;
 ```
+
+**Unboxing**. Converting an object of a wrapper type (`Integer`) to its corresponding primitive(`int`) value is called unboxing. The Java compiler applies unboxing when a object of a wrapper class is
+   * Passed as a parameter to a method that expects a value of the corresponding primitive type.
+   * Assigned to a variable of the corresponding primitive type.
+
+Autoboxing and unboxing lets developers write cleaner code, making it easier to read.
+
 
 #### 📌 Object Interning
 Object interning is keeping only one copy of every distinct Java object. The object must be immutable. These objects are stored in an **_INTERN POOL_** . In Java, when primitive values are boxed into a wrapper object, the values are interned, and any boxing conversions  of these values are guaranteed to result in the same object. 
