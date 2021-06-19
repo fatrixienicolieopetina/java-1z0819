@@ -3,8 +3,8 @@
 ## List of Topics To Review
 ### 1. Working with Java Data Types
 
-  - [ ] **[ [1A](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/working-with-java-data-types/1A-java-primitives.md) ]** Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting<br/>
-  - [ ] **[ [1B](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/working-with-java-data-types/2A-string-and-string-builders.md) ]** Handle text using String and StringBuilder classes <br>
+  [✔️] **[ [1A](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/working-with-java-data-types/1A-java-primitives.md) ]** Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting<br/>
+  [✔️] **[ [1B](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/working-with-java-data-types/2A-string-and-string-builders.md) ]** Handle text using String and StringBuilder classes <br>
   - [ ] **[ 1C ]** The Number Classes
   - [ ] **[ 1D ]** Use local variable type inference, including as lambda parameters 
 
