@@ -11,7 +11,7 @@
 
 
 ### 2. Controlling Program Flow
-- [ ] **[ 2A ]** Create and use loops, if/else, and switch statements
+  [✔️] **[ [2A](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/controlling-program-flow/2A-control-flow.md) ]** Create and use loops, if/else, and switch statements
 
 ### 3. Java Object-Oriented Approach
 
