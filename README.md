@@ -15,7 +15,9 @@
 
 ### 3. Java Object-Oriented Approach
   [✔️] **[ [ 01 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/oop-concepts.md)]** Core Concepts Behind Java OOP<br>
-  [✔️] **[[ 02 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/classes.md)]** Classes
+  [✔️] **[[ 02 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/classes.md)]** Classes<br>
+  [✔️] **[[ 03 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/garbage-collection.md)]** Garbage Collection
+  
 - [ ] **[ 3A ]** Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection) <br/>
 - [ ] **[ 3B ]** Define and use fields and methods, including instance, static and overloaded methods <br/>
 - [ ] **[ 3C ]** Initialize objects and their members using instance and static initialiser statements and constructors <br/>
