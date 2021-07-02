@@ -50,3 +50,6 @@ More generally, method declarations have six components, in order:
 3. You cannot declare more than one method with the same name and the same number of type of arguments because the compiler cannot tell them apart.
 4. The compiler **DOES NOT** consider return type when differentiating methods, so you cannot declare two methods with the same signature even if they have different return type.
 5. Overloaded methods should be used sparingly since they can make code much less readable.
+
+### 📌 Returning a Value from a Method
+//TODO
