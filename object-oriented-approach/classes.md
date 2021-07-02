@@ -53,3 +53,29 @@ More generally, method declarations have six components, in order:
 
 📌 Returning a Value from a Method
 1. Covariant Return Type = a return type is allowed to vary as the same direction as the subclass. This means that a method's return type can be replaced by a narrower type when the method is overridden by a subclass. This implies that the return type of the overriding method is a subtype of the overridden method.
+
+📌 `this` method
+1. `this` is a reference to the current object
+2. The most common reason for using `this` is because a field is shadowed by a method or a constructor parameter.
+3. `Explicit Constructor Invocation` . From within a constructor, you use the `this` keyword to call other constructors of the class. If present the invocation of another constructor must be the first line of a constructor.
+
+📌 Controlling Access to Members of a Class 
+1. Access level modifiers determine whether other classes can use a particular field or a particular method. 
+2. There are two levels of access control :
+  * Top-level : `public` and `package-private` (no explicit modifier)
+  * Member-level: `public`, `private`, `protected` and `package-private` (no explicit modifier)
+3. A class can be declared public, accessible anywhere
+4. If a class has no modifier, it is visible only within its own package `package-private`.
+5. At the member level `public` and `package-private` access are the same with the top level.
+6. The `private` modifier specifies that the member can only be accessed by its own class.
+7. The `protected` modifier specifies that the member can only be accessed within its own package and subclasses.
+
+|Access Level |Class|Package |Subclass|World|
+|:----|:----|:----|:----|:----|
+|`public`|Y|Y|Y|Y|
+|`protected`|Y|Y|Y|N|
+|no access modifier|Y|Y|N|N|
+|`private`|Y|N|N|N|
+
+
+||TO continue
