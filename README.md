@@ -17,7 +17,10 @@
   [✔️] **[ [ 01 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/oop-concepts.md)]** Core Concepts Behind Java OOP<br>
   [✔️] **[[ 02 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/classes.md)]** Classes<br>
   [✔️] **[[ 03 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/garbage-collection.md)]** Garbage Collection<br>
-  [✔️] **[[ 04 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/static-initialization-block.md)]** Static Initialization Block
+  [✔️] **[[ 04 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/static-initialization-block.md)]** Static Initialization Block<br> 
+  [✔️] **[[ 05 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/nested-classes.md)]** Nested Classes<br>
+  
+  🔖 **[BOOKMARK: Inner class example](https://docs.oracle.com/javase/tutorial/java/javaOO/innerclasses.html)**
   
 - [ ] **[ 3A ]** Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection) <br/>
 - [ ] **[ 3B ]** Define and use fields and methods, including instance, static and overloaded methods <br/>
