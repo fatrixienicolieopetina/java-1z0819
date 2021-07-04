@@ -77,5 +77,5 @@ More generally, method declarations have six components, in order:
 |no access modifier|Y|Y|N|N|
 |`private`|Y|N|N|N|
 
-
-||TO continue
+📌 Understanding Class Members
+1. If a primitive type or a string is defined as a constant and the value is known at compile time, the compiler replaced the constant name everywhere in the code with its value. This is called **_compile-time constant_**. If the value of the constant in the outside wolrd changes, any class that use this constant to get the current value needs to be recompiled.
