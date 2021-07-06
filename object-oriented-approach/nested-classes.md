@@ -34,4 +34,8 @@
 2. Might have compatibility issues if an inner class is serialized and then deserialize it with a different JRE implementation.
 3. Read more at the Serialization section of this [link](https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html)
 
+### 📌 Local and Anonymous Classes
+1. There are two types of inner classes : local and anonymous. Inner class within the body of a method is called a local class. An **inner class** can also be declared inside the body of a method without naming them, i.e. an **anonymous**.
+2. The same modifiers used for other members of the outer class can be used for an inner class. For instance the access modifers `private`, `public`, `package-private` `protected` can be used in an inner class just like how they are used for the instance fields of the outer class.
 
+#### 📌 [More on Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
