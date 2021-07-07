@@ -39,3 +39,4 @@
 2. The same modifiers used for other members of the outer class can be used for an inner class. For instance the access modifers `private`, `public`, `package-private` `protected` can be used in an inner class just like how they are used for the instance fields of the outer class.
 
 #### 📌 [More on Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
+1. Local classes are classes defined in a block, which is a group of zero or more statements. 
