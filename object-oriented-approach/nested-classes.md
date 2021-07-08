@@ -51,3 +51,31 @@
 10. An interface cannot be declared inside a block. Interfaces are inherently static.
 11. Static initializers or member interfaces cannot be declared inside a local class. 
 12. A local class can have static members provided that they are constant variables. A _constant variable_ is a variable of primitive type of type String that is declared final and initialized with a compile-time constant expression. A compile time constant expression is typically a string or an arithmetic expression that can be evaluated at compile time.
+
+### 📌 Anonymous Classes
+1. Anonymous classes makes the code more concise. It enables declaration and instantiation of class at the same time. They are similar to local classes except that they do not have a name.
+2. While local classes are class declaration, **anonymous classes are expressions**, which means that the class is defined in another expression. 
+3. The syntax of an anonymous class expression is like the invocation of a constructor, except that there is a class definition contained in the code block.
+```java
+HelloWorld helloWorld = new HelloWorld() {
+  // code here
+};
+```
+4. The anonymous class expression consists of the following: `new` operator, the name of an interface to implement or a class to extend, parentheses that contain the arguments to a constructor, just like a normal class instance creation expression and a body, which is a class declaration body.
+5. Because an anonymous class definition is an expression, it must be part of a statement. This explains why there is a semicolon after the closing brace.
+
+#### 📌 Accessing Local Variables of the Enclosing Scope and Declaring and Accessing Members of the Anonymous Class
+1. Like local classes, anonymous classes can capture variables; they have the same access to local variables of the enclosing scope.
+2. An anonymous class has access to the members of its enclosing class
+3. An anonymous class cannot access local variables in its enclosing scope that are not declared as final or effectively final.
+4. Like a nested class, a declaration of a type in an anonymous class shadows any other declarations in the enclosing scope that have the same name.
+5. Anonymous classes also have the same restrictions as local classes with respect to their members: static initializers or member interfaces cannot be declared; an anonymous class can have static members provided that they are constant variables. 
+6. Note, the ff can be declared in anonymous class
+  a. Fields
+  b. extra methods
+  c. instance initializers
+  d. local classes
+8. **IMPORTANT: You cannot declare constructors in an anonymous class.**
+9. Anonymous classes are ideal for implementing an interface that contains two or more methods.
+
+### 📌 [Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
