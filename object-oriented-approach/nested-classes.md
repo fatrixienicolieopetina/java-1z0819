@@ -40,3 +40,14 @@
 
 #### 📌 [More on Local Classes](https://docs.oracle.com/javase/tutorial/java/javaOO/localclasses.html)
 1. Local classes are classes defined in a block, which is a group of zero or more statements. 
+2. Local classes can be defined inside any block, i.e. in a method body, a for loop or an if clause.
+3. A local class has access to the members of its enclosing class. It also has access to local variables.
+4. **IMPORTANT: A local class can only access localvariables that are declared final.** When a local class accesses a local variable or parameter of the enclosing block, it **_captures_** the variable or parameter.
+5. Starting Java 8, a local class can access local variables and parameters of the enclosing block that are final or effectively final. A variable or parameter whose value is never changed after it is initialized is **effectively final**.
+6. Starting also in Java SE 8, if you declare the local class in a method, it can access the ,ethod's parameters.
+7. Local classes are similar to inner classes because they cannot define or declare any static members.
+8. Local classes in static methods, can only refer static members of the enclosing classes.
+9. Local classes are non-stattic because they have access to instance members of the enclosing block. Consequently they cannot contain most kinds of static declarations.
+10. An interface cannot be declared inside a block. Interfaces are inherently static.
+11. Static initializers or member interfaces cannot be declared inside a local class. 
+12. A local class can have static members provided that they are constant variables. A _constant variable_ is a variable of primitive type of type String that is declared final and initialized with a compile-time constant expression. A compile time constant expression is typically a string or an arithmetic expression that can be evaluated at compile time.
