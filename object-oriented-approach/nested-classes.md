@@ -79,3 +79,55 @@ HelloWorld helloWorld = new HelloWorld() {
 9. Anonymous classes are ideal for implementing an interface that contains two or more methods.
 
 ### 📌 [Lambda Expressions](https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)
+1. Lambda Expressions enables developers to treat functionality as a method argument, or code as a data.
+2. For classes with only one method, an anonymous class, much more a named class is a bit excessive and cumbersome. Lambdas express instances of single-method classes more compactly.
+
+#### 📌 Syntax of Lambda Expressions
+A lambda expression consists of the ff.
+* A comma-separated list of formal parameters enclosed in parentheses. The data type of the parameters in the lambda expression can be omitted. Moreover, the parentheses can be omitted if there is only one parameter.
+* The arrow token `->`
+* The body which consists of a single expression or a statement block. The return statement can also be used, however, keep in mind that a return statement is not an expression in lambdas, so they must be enclosed in braces. Lambdas can be treated as anonymous methods - methods without names.
+
+#### 📌 Functional Interface
+A **_functional interface_** is any interface that contains only one **abstract method**. It may contain one or more default methods of static methods. Because it only contains one abstract method, the name can be omitted when implementing it. By doing this instead of using an anonymous class expression, a lambda expression is used. The JDK defines several standard functional interfaces which can be found in the package `java.util.function`.
+
+#### Accessing Local Variables of the Enclosing Scope in Lambda Expressions
+1. Like local and anonymous classes, lambdas can capture variables; they have the same access to local variables of the enclosing scope. However, unlike local and anonymous classes, lambdas do not have shadowing issues. 
+2. Lambdas are **lexically scoped**. This means that they do not inherit any names from a supertype of introduce a new level of scoping. Declarations in lambdas are interpreted just as they are in the enclosing environment.
+3. If the parameter passed to a lambda is declared in the enclosing scope, then the compiler generates an error, `Lambda expression's parameter {} cannot redeclare another local variable defined in an enclosing scope`. This is because lambda expressions do not introduce a new level of scoping. Consequently, lambdas can directly access fields, methods and local variables of the enclosing scope. 
+4. Like local and anonymous classes, a lambda expression can only access local variables and parameters of the enclosing block that are **final** or **effectively final** (value should not be changed after initialization).
+
+#### 📌 Target Typing in Lambdas
+> So how can the type of a lambda expression determined, e.g. the type of p in the example below?
+`p -> p.getAge() < 18`
+When the Java runtime invokes the method where the lambda is passed, it is expecting a specific datatype, so the lambda expression is of this type.The data type that these methods expect is called the **target type**. To determine the type of a lambda expression, the Java compiler uses the target type of the context or situation in which the lambda expression was found. Thus, **_lambda expressions can only be used in situation in which the Java compiler can determin the target type: _**
+* variable declarations
+* assignments
+* return statements
+* array initializers
+* method or constructor arguments
+* lambda expression bodies
+* conditional expressions
+* cast expressions
+
+##### Target Types and Method Arguments
+For method arguments, the Java compiler determines the target type with two other language features **overload resolution** and **type argument interface**.
+
+For instance, the functional interfaces `java.lang.Runnable` and `java.util.Callable<V>` is implemented and overloaded by a certain class.
+```java
+void invoke(Runnable r) {
+    r.run();
+}
+
+<T> T invoke(Callable<T> c) {
+    return c.call();
+}
+```
+
+Which method will be invoked by the statement `String s = invoke(() -> "done");` ?
+The method with argument `Callable<V>` will be invoked because the lambda returns a value, in this case the string `done`. Note that the method `invoke(Runnable)` does not return a value.
+
+#### 📌 Serialization of Lambdas
+A lambda can be serialized if its target type and its captured arguments are serializable. However, like inner classes, 🛑 **the serialization of lambdas are strongly discouraged**.
+
+
