@@ -150,3 +150,15 @@ There are four types of method referencing
 |Reference to an instance method of an arbitrary object of a particular type|`ContainingType::methodName`|`String::concat`|
 |Reference to a constructor|`ClassName::new`|`HashSet::new`|
 
+### 📌 When to Use Nested Classes, Local Classes, Anonymous Classes and Lambda Expressions
+Nested Classes enables the logical grouping of classes that are only used in one place, increase the use of encapsulation, create more readable and maintanable code. Local classes, anonymous classes and lambda expressions also share the same advantages but they are usually used for more specific situations:
+* **Local Class** . Used if creating more than one instance of a class is needed, access its constructor and/or introduce a new, named type.
+* **Anonymous Class** . Used if declared fields or additional methods are needed
+* **Lambda Expressions** . 
+    * Used for encapsulating a single unit of behavior that is passed to the other parts of the code. 
+    * Used if a simple instance of a functional interface is needed and some other cirteria like constructor, named type, fields or additional methods are not needed
+
+* **Nested Class** . Used for reasons similar to those of local classes, i.e. it is necessary to make the type more widely available, and access to local variables or method parameters are not needed.
+    * Inner class should be used if access to an enclosing instance's non-public fields and methods are required. 
+    * Static class should be used if there is no instance field that needs to be accessed from the class.
+
