@@ -130,4 +130,23 @@ The method with argument `Callable<V>` will be invoked because the lambda return
 #### 📌 Serialization of Lambdas
 A lambda can be serialized if its target type and its captured arguments are serializable. However, like inner classes, 🛑 **the serialization of lambdas are strongly discouraged**.
 
+#### 📌 Method References
+Lambdas can be used to create anonymous methods. However, there are times when it does nothing but call an existing method. In these cases, it is often clearer to refer to the existing method by name, called **method referencing**. They are compacy, easy-to-read lambdas for methods that already have a name.
+For instance this can be done in sorting an array of Person objects by age. 
+```java
+Arrays.sort(personListAsArray, Person::compareByAge);
+```
+The method reference `Person::compareByAge` is semantically the same as the lambda expression where `compareByAge` is a static method of the Person class.
+```java
+(person1, person2) -> Person.compareByAge(person1, person1)
+```
+
+##### Kinds of Method References
+There are four types of method referencing
+|Kind|Syntax|Example|
+|:---|:----|:----|
+|Reference to a static method|`ContainingClass::staticMethodName`|`Person::compareByAge`|
+|Reference to an instance method of a particular object|`containingObject::instanceMethodName`|`person1::compareByName`|
+|Reference to an instance method of an arbitrary object of a particular type|`ContainingType::methodName`|`String::concat`|
+|Reference to a constructor|`ClassName::new`|`HashSet::new`|
 
