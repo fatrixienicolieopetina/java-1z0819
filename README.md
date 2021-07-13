@@ -20,12 +20,12 @@
   [✔️] **[[ 04 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/static-initialization-block.md)]** Static Initialization Block<br> 
   [✔️] **[[ 05 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/nested-classes.md)]** Nested Classes<br>
   
-  🔖 **[BOOKMARK: Enum Types](https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html)**
+  🔖 **[BOOKMARK: Annotations](https://docs.oracle.com/javase/tutorial/java/annotations/index.html)**
   
-- [ ] **[ 3A ]** Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection) <br/>
-- [ ] **[ 3B ]** Define and use fields and methods, including instance, static and overloaded methods <br/>
-- [ ] **[ 3C ]** Initialize objects and their members using instance and static initialiser statements and constructors <br/>
-- [ ] **[ 3D ]** Understand variable scopes, apply encapsulation and make objects immutable <br/>
+[✔️] **[ 3A ]** Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection) <br/>
+[✔️] **[ 3B ]** Define and use fields and methods, including instance, static and overloaded methods <br/>
+[✔️]  **[ 3C ]** Initialize objects and their members using instance and static initialiser statements and constructors <br/>
+[✔️]  **[ 3D ]** Understand variable scopes, apply encapsulation and make objects immutable <br/>
 - [ ] **[ 3E ]** Create and use subclasses and superclasses, including abstract classes <br/>
 - [ ] **[ 3F ]** Utilize polymorphism and casting to call methods, differentiate object type versus reference type <br/>
 - [ ] **[ 3G ]** Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods <br/>
