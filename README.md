@@ -29,7 +29,7 @@
 - [ ] **[ 3E ]** Create and use subclasses and superclasses, including abstract classes <br/>
 - [ ] **[ 3F ]** Utilize polymorphism and casting to call methods, differentiate object type versus reference type <br/>
 - [ ] **[ 3G ]** Create and use interfaces, identify functional interfaces, and utilize private, static, and default methods <br/>
-- [ ] **[ 3H ]** Create and use enumerations <br/>
+[✔️] **[ 3H ]** Create and use enumerations <br/>
 
 ### 4. Exception Handling
 - [ ] **[ 4A ]** Handle exceptions using try/catch/finally clauses, try-with-resource, and multi-catch statements
