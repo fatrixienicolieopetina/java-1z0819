@@ -92,5 +92,40 @@ The annotation type definitions looks similar to an interface definition where t
 
 
 ### 📌 Predefined Annotation Types
+A set of annotation types are predefined in the Java SE API.
+
+#### Annotation Types Used by the Java Language
+The predefined annotation types defined in `java.lang` are : `@Deprecated`, `@Override`, and `@SuppressWarnings`.
+* `@Deprecated`. This indicates that the marked element is deprecated and should no longer be used. The compuler generates a warning whenever a program uses a method, class, or field with this annotation. When an element is deprecated it should also be documented using the Javadoc `@deprecated` tag.
+```java
+// Javadoc comment follows
+    /**
+     * @deprecated
+     * explanation of why it was deprecated
+     */
+    @Deprecated
+    static void deprecatedMethod() { }
+```
+
+* `@Override`. This informs the compiler that the element is meant to override an element declared in superclass. While it is not required to use this annotation when overriding a method, it helps to prevent errors. If a method marked with `@Override` fails to correclty override a method in one of its superclasses, the compiler generates an error.
+
+* `@SupressWarnings`. This tells the compiler to suppress specific warnings that it would otherwise generate. For instance,
+```java
+// use a deprecated method and tell 
+   // compiler not to generate a warning
+   @SuppressWarnings("deprecation")
+    void useDeprecatedMethod() {
+        // deprecation warning
+        // - suppressed
+        objectOne.deprecatedMethod();
+    }
+```
+Every compiler warning belongs to a category. The Java language specification lists two categories: `deprecation` and `unchecked`. Unchecked warnings occur when interfacing with legacy code written before the advent of generics.
+* `@SafeVarargs` . When applied to a method or constructor, this asserts that the code does not perform potentially unsafe operations on its `varargs` parameter. When this annotation is used, unchecked warnings related to `varargs` are suppressed.
+* `@FunctionalInterface`. Introduced in Java 8, this indicates that the type declaration is intended to be a functional interface.
+
+#### Annotations that Apply to Other Annotations
+//https://docs.oracle.com/javase/tutorial/java/annotations/predefined.html
+
 ### 📌 Type Annotations and Pluggable Type Systems
 ### 📌 Repeating Annotations
