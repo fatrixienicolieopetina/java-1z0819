@@ -72,6 +72,25 @@ class UnmodifiableList<T> implements
 void monitorTemperature() throws
         @Critical TemperatureException { ... }
 ```
+
+#### Defining the annotation type
+The syntax for doing this is:
+```java
+@interface ClassPreamble {
+   String author();
+   String date();
+   int currentRevision() default 1;
+   String lastModified() default "N/A";
+   String lastModifiedBy() default "N/A";
+   // Note use of array
+   String[] reviewers();
+}
+```
+The annotation type definitions looks similar to an interface definition where the keyword `interface` is preceded by the @ sign. Annotations are a form of interface. The body of the annotation definition contains `annotation type element` declaration, which look a lot like methods. They can also be defined with default values filled in.
+
+**NOTE**: To make the information of an annotation appear in Javadoc-generated documentation, it must be annotated with the @Documented annotation.
+
+
 ### 📌 Predefined Annotation Types
 ### 📌 Type Annotations and Pluggable Type Systems
 ### 📌 Repeating Annotations
