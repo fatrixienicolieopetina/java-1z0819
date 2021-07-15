@@ -146,4 +146,18 @@ Annotations that apply to other annotations are called meta-annotations. There a
 * `@Repeatable`. Introduced in Java 8, this indicates that the marked annotation can be applied more than once to the same declaration or type use. 
 
 ### 📌 Type Annotations and Pluggable Type Systems
+Before Java 8, annotations can only be applied to declarations. After Java 8's release, annotations can also be applied to any **type use**. This meant that annotations can be used anywhere where type is used., e.g. instance creation expressions _`(new)`_, casts, `implements` clauses and `throws` clauses. This form of annotation is called `type annotation`. 
+
+Type Annotations were created to support improved analysis of Java programs way of ensuring stronger type checking. The Java SE 8 release does not provide a type checking framework, but it allows developers to write (or download) a type checking framework that is implemented as one or more **pluggable modules** that are used in conjunction with the compiler.
+
+For instance, a custom plug-in check can be used to ensure that a certain variable is never assigned `null`.
+```java
+@NonNull String str;
+```
+When this code is compiled including the `NonNull` module, the compiler prints a warning if it detects a potential problem, allowing developers to modify the code to avoid the error. After the code is corrected, this particular error will not occur when the program runs.
+
+With the judicious use of type annotations and presence of pluggable type checkers, the code can be stronger and less prone to error.
+
+There are a lot of existing libraries for type checking modules. For example the Checker Framework created by University of Washington. This framework includes a NonNull module, as well as regular expression module and a mutex lock module. See [this](https://checkerframework.org/) for more information.
+
 ### 📌 Repeating Annotations
