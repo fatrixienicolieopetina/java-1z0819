@@ -161,3 +161,32 @@ With the judicious use of type annotations and presence of pluggable type checke
 There are a lot of existing libraries for type checking modules. For example the Checker Framework created by University of Washington. This framework includes a NonNull module, as well as regular expression module and a mutex lock module. See [this](https://checkerframework.org/) for more information.
 
 ### 📌 Repeating Annotations
+As of Java 8 release, repeating annotations are introduced which enables developers to use the same annotation to a declaration or type use.
+
+#### Steps in Creating a Repeatable Annotation
+1. **Declaring Repeating Annotations**
+The annotation type must be marked with the `@Repeatable` metannotation. For instance
+```java
+@Repeatable(Schedules.class)
+public @interface Schedule {
+  String dayOfMonth() default "first";
+  // ...
+}
+```
+The value of the @Repeatable meta-annotation, in parentheses, is the type of the container annotation that the Java compiler generates to store repeating annotations. In this example, the containing annotation type is Schedules, so repeating @Schedule annotations is stored in an @Schedules annotation.
+
+**Applying the same annotation to a declaration without first declaring it to be repeatable results in a compile-time error.**
+
+2. **Declare the Containing Annotation Type**
+The containing annotation type must have a value element with an array type. The component type of the array type must be the repeatable annotation type. The declaration for the Schedules containing annotation type is the following:
+```java
+public @interface Schedules {
+    Schedule[] value();
+}
+```
+
+##### Retrieving Annotations
+There are several methods available in the Reflection API that can be used to retrieve annotations. The behavior of the methods that return a single annotation, such as `AnnotatedElement.getAnnotation(Class<T>)`, are unchanged in that they only return a single annotation if one annotation of the requested type is present. If more than one annotation of the requested type is present, you can obtain them by first getting their container annotation. In this way, legacy code continues to work. Other methods were introduced in Java SE 8 that scan through the container annotation to return multiple annotations at once, such as AnnotatedElement.getAnnotationsByType(Class<T>). See the AnnotatedElement class specification for information on all of the available methods.
+   
+##### Design Considerations
+When designing an annotation type, you must consider the cardinality of annotations of that type. It is now possible to use an annotation zero times, once, or, if the annotation's type is marked as @Repeatable, more than once. It is also possible to restrict where an annotation type can be used by using the @Target meta-annotation. For example, you can create a repeatable annotation type that can only be used on methods and fields. It is important to design your annotation type carefully to ensure that the programmer using the annotation finds it to be as flexible and powerful as possible.
