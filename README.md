@@ -1,6 +1,7 @@
 # Java SE 11 Developer Exam Number: 1Z0-819 🗒️📝
 ---
 ## List of Topics To Review
+### [The Java Trail](https://docs.oracle.com/javase/tutorial/java/TOC.html)
 ### 1. Working with Java Data Types
 
   [✔️] **[ [1A](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/working-with-java-data-types/1A-java-primitives.md) ]** Use primitives and wrapper classes, including, operators, parentheses, type promotion and casting<br/>
@@ -20,7 +21,7 @@
   [✔️] **[[ 04 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/static-initialization-block.md)]** Static Initialization Block<br> 
   [✔️] **[[ 05 ](https://github.com/fatrixienicolieopetina/java-1z0819/blob/main/object-oriented-approach/nested-classes.md)]** Nested Classes<br>
   
-  🔖 **[BOOKMARK: Repeating Annotations](https://docs.oracle.com/javase/tutorial/java/annotations/repeating.html)**
+  🔖 **[BOOKMARK: Interfaces and Inheritance](https://docs.oracle.com/javase/tutorial/java/IandI/index.html)**
   
 [✔️] **[ 3A ]** Declare and instantiate Java objects including nested class objects, and explain objects' lifecycles (including creation, dereferencing by reassignment, and garbage collection) <br/>
 [✔️] **[ 3B ]** Define and use fields and methods, including instance, static and overloaded methods <br/>
