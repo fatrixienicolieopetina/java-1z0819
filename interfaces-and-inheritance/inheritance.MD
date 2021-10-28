@@ -16,3 +16,10 @@ A subclass **inherits all of the public and protected members of its parent, no 
 6. Write a new static method in the subclass that has the same signature as the one in the superclass, thus hiding it.
 7. Declare new methods in the subclass that are not in the superclass.
 8. Write a subclass constructor that invokes the constructor of the superclass, either implicitly or by using the keyword super.
+
+### Private Members in a Superclass
+A subclass does not inherit the private members of its parent class. However, if the superclass has public or protected methods for accessing its private fields, these can also be used by the subclass.
+
+A nested class has access to all the private members of its enclosing class—both fields and methods. 
+
+#### Therefore, a public or protected nested class inherited by a subclass has indirect access to all of the private members of the superclass.
